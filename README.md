@@ -1,4 +1,4 @@
-# sms_autofill
+# Flutter-sms-autofill
  Flutter plugin to provide SMS code autofill support. 
 
 For iOS, this package is not needed as the SMS autofill is provided by default, but not for Android, that's where this package is useful.
@@ -12,7 +12,7 @@ In the `dependencies:` section of your `pubspec.yaml`, add the following line:
 dependencies:
     sms_autofill:
     git:
-      url: git://github.com/Cilestal/sms_autofill
+      url: git://github.com/Cilestal/Flutter-sms-autofill
 ```
 
 ## Usage
