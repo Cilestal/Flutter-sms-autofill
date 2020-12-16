@@ -10,7 +10,7 @@ In the `dependencies:` section of your `pubspec.yaml`, add the following line:
 
 ```yaml
 dependencies:
-    simple_tooltip:
+    sms_autofill:
     git:
       url: git://github.com/Cilestal/sms_autofill
 ```
