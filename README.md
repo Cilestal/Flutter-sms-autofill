@@ -23,7 +23,27 @@ Just before you sent your phone number to the backend, you need to let know the 
 To do that you need to do:
 
 ```dart
-await SmsAutoFill().listenForCode;
+class _TestState extends State<TestWidget> with CodeAutoFill {
+  
+  @override
+  void initState() {
+    listenForCode();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    cancel();
+    unregisterListener();
+    super.dispose();
+  }
+
+  @override
+  void codeUpdated() {
+    // use _code
+  }
+  
+}
 ```
 This will listen for the SMS with the code during 5 minutes and when received, autofill the following widget.
 
