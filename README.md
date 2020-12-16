@@ -24,7 +24,7 @@ To do that you need to do:
 
 ```dart
 class _TestState extends State<TestWidget> with CodeAutoFill {
-  
+
   @override
   void initState() {
     listenForCode();
@@ -33,16 +33,15 @@ class _TestState extends State<TestWidget> with CodeAutoFill {
 
   @override
   void dispose() {
-    cancel();
     unregisterListener();
     super.dispose();
   }
 
   @override
-  void codeUpdated() {
+  void codeUpdated(String code) {
     // use _code
   }
-  
+
 }
 ```
 This will listen for the SMS with the code during 5 minutes and when received, autofill the following widget.
