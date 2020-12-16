@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pin_input_text_field/pin_input_text_field.dart';
 import 'package:sms_autofill/sms_autofill.dart';
+import 'package:sms_autofill/phone_field_hint.dart';
+import 'package:sms_autofill/pin_field_autofill.dart';
+import 'package:sms_autofill/text_field_pin_autofill.dart';
 
 void main() => runApp(MyApp());
 
@@ -120,7 +123,7 @@ class _CodeAutoFillTestPageState extends State<CodeAutoFillTestPage> with CodeAu
   String otpCode;
 
   @override
-  void codeUpdated() {
+  void codeUpdated(String code) {
     setState(() {
       otpCode = code;
     });
@@ -140,8 +143,8 @@ class _CodeAutoFillTestPageState extends State<CodeAutoFillTestPage> with CodeAu
 
   @override
   void dispose() {
+    unregisterListener();
     super.dispose();
-    cancel();
   }
 
   @override
