@@ -1,10 +1,19 @@
 # sms_autofill
-
-[![pub package](https://img.shields.io/pub/v/sms_autofill.svg)](https://pub.dartlang.org/packages/sms_autofill) Flutter plugin to provide SMS code autofill support. 
+ Flutter plugin to provide SMS code autofill support. 
 
 For iOS, this package is not needed as the SMS autofill is provided by default, but not for Android, that's where this package is useful.
 
 No permission to read SMS messages is asked to the user as there no need thanks to SMSRetriever API. 
+
+# Installation
+In the `dependencies:` section of your `pubspec.yaml`, add the following line:
+
+```yaml
+dependencies:
+    simple_tooltip:
+    git:
+      url: git://github.com/Cilestal/sms_autofill
+```
 
 ## Usage
 You have two widgets at your disposable for autofill an SMS code, PinFieldAutoFill and TextFieldPinAutoFill.
